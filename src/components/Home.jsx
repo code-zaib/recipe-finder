@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Recipe from "./Recipe";
 import { RecipeList } from "./recipe-list-store";
 import styles from "./Home.module.css";
+import main from "../assets/main.png";
 const Home = () => {
   const [homePageRecipe, setHomePageRecipe] = useState({});
   const [randomNumbers, setRandomNumbers] = useState([]);
@@ -32,10 +33,7 @@ const Home = () => {
   return (
     <>
       <div className={styles.firstSection}>
-        <img
-          src="src/assets/Blank 2 Grids Collage.png"
-          className={styles.mainImage}
-        ></img>
+        <img src={main} className={styles.mainImage}></img>
         <div className={styles.textCon}>
           <h2>
             Discover the Taste of Home: Where Every Recipe is a Delicious
