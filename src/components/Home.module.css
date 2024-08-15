@@ -1,0 +1,125 @@
+.firstSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.textCon {
+    margin-right: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.textCon h2 {
+    background:  linear-gradient(43deg, #4158D0 0%, #C850C0 46%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.textCon .button {
+  height: 50px;
+  width: auto;
+  padding: 10px;
+  border: 2px solid #C850C0;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.textCon .button:hover > .leftArrow {
+  color: #C850C0;
+}
+.mainImage {
+    height: 400px;
+}
+.secondSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+.secondSection .moreBtn {
+    height: 40px;
+    width: auto;
+    line-height: 40px;
+    padding: 0px 10px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    background-color: rgb(200, 80, 192);
+    transition: transform 0.2s ease-out;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+
+}
+
+@media (max-width: 1200px) {
+    .textCon {
+        margin-right: 0;
+        width: 100%;
+    }
+    .textCon h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .textCon {
+        margin-right: 0;
+        width: 100%;
+    }
+    .textCon h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .mainImage {
+        height: 350px;
+    }
+    .textCon h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .textCon .button {
+        height: 40px;
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mainImage {
+        height: 350px;
+    }
+    .textCon h2 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .textCon .button {
+        height: 35px;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+    .secondSection {
+        padding: 20px;
+    }
+    .secondSection .moreBtn {
+        height: 35px;
+        font-size: 1.1rem;
+        padding: 0 8px;
+    }
+}

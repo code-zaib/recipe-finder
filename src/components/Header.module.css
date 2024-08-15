@@ -1,0 +1,159 @@
+.header {
+    
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4158D0;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    position: relative;
+}
+.logo h3 {
+    font-size: 30px;
+    background:  linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo img {
+    height: 30px;
+}
+.header > ul {
+    position: relative;
+    top: 8px;
+    display: flex;
+    gap: 2rem;
+}
+.header > ul > li {
+    position: relative;
+    list-style: none;
+    font-size: 1.2rem;
+} 
+.header > ul > li > .list {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+.list:hover, .activeList {
+    background:  linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.activeList::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(200, 80, 192);
+    animation: show 0.2s ease-out;
+    transform-origin: left;
+}
+@keyframes show {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+.searchBox {
+    display: flex;
+}
+.searchBox input {
+    height: 40px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    transform-origin: right;
+}
+.searchBox > input:focus {
+    border-bottom: 1.5px solid rgb(200, 80, 192);
+}
+.searchBox button {
+    height: 40px;
+    width: auto;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    border: 1.5px solid rgb(200, 80, 192);
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+    color: rgba(0, 0, 0, 0.8);
+}
+.searchBox button:hover {
+    background-color: rgb(200, 80, 192);
+    color: white;
+}
+/* For tablets and larger screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 10px;
+    }
+    .header .logo {
+        margin-bottom: 20px;
+    }
+    .header > ul {
+        width: 100%;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .header .searchBox {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .logo h3 {
+        font-size: 24px;
+    }
+    .logo img {
+        height: 24px;
+    }
+    .header > ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .header > ul > li {
+        font-size: 1rem;
+    }
+    .header .searchBox {
+        align-items: center;
+    }
+    .searchBox input, .searchBox button {
+        width: auto;
+        font-size: 1rem;
+    }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 320px) {
+    .logo h3 {
+        font-size: 20px;
+    }
+    .logo img {
+        height: 20px;
+    }
+    .header > ul > li {
+        font-size: 0.9rem;
+    }
+    .header .searchBox input, .header .searchBox button {
+        font-size: 0.9rem;
+    }
+    .header .searchBox button {
+        width: 80px;
+    }
+}
