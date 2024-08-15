@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import mixing from "../assets/mixing.png";
 import { RecipeList } from "./recipe-list-store";
 import styles from "./Header.module.css";
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
   return (
     <nav className={styles.header}>
       <Link to="/" className={styles.logo}>
-        <img src="src\assets\mixing.png"></img>
+        <img src={mixing}></img>
         <h3>recipe world</h3>
       </Link>
       <ul>
